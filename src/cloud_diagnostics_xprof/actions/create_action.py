@@ -880,12 +880,12 @@ spec:
         stdout = list_command_output
         return stdout
 
-    # kubernetes has limits on name lenght < 64!
+    # kubernetes has limits on name length < 64!
     unique_id = f'{uuid.uuid4()}'
 
     all_outputs: list[str] = []
     ### STEPS ###
-    # Build the YAML file from args inputed.
+    # Build the YAML file from args input.
     # Get region from the zone in args by ignoring the last dash-separated part.
     region = args.zone.rsplit('-', 1)[0]
     yaml_params = dict(
