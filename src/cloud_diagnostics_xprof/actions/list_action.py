@@ -136,7 +136,7 @@ class List(action.Command):
     Args:
       filter_values: The filter values to format.
       match_operator: The operator used for matching (only ~, =, !=).
-      join_operator: The opeartor used to join the filter strings (AND / OR).
+      join_operator: The operator used to join the filter strings (AND / OR).
       verbose: Whether to print the command and other output.
 
     Returns:
@@ -273,7 +273,7 @@ class List(action.Command):
         f'labels.{self.XPROFILER_VERSION_LABEL_KEY}': ['*'],
     }
 
-    # Filter log directoy or other user-provided filters after runing command.
+    # Filter log directoy or other user-provided filters after running command.
     full_filter_string = self._format_filter_string(
         base_filter_values,
         match_operator='~',
@@ -289,7 +289,7 @@ class List(action.Command):
       filter_string = ' AND '.join(args.filter)
 
       # AND the main filter string with the filter string.
-      # Paranetheses are needed if the filter string from user uses OR.
+      # Parentheses are needed if the filter string from user uses OR.
       full_filter_string = f'({full_filter_string}) AND ({filter_string})'
 
     if verbose:
@@ -836,7 +836,7 @@ class List(action.Command):
                   f' for {name} ({vm}).'
               )
             continue
-          # Usually apears in URL format: https://.../zones/us-central1-a
+          # Usually appears in URL format: https://.../zones/us-central1-a
           zone = vm.get('zone', '').split('/')[-1]
           # Just the region from the zone. (e.g. us-central1-a -> us-central1)
           region = '-'.join(zone.split('-')[:-1])
