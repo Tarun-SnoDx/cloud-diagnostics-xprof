@@ -305,7 +305,7 @@ class Command(abc.ABC):
     Returns:
       A mapping of column headers to values from a table string.
     """
-    # For referennce of order of columns.
+    # For reference  of order of columns.
     columns_index: dict[int, str] = dict(enumerate(columns))
 
     data_table: dict[str, list[str]] = {
