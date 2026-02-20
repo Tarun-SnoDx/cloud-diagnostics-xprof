@@ -328,7 +328,7 @@ class Delete(action.Command):
       raise ValueError('No VM(s)/Pod(s) to delete.')
 
     # Skip confirmation if user specified --quiet.
-    # Only need to display VM(s) if the user is confiming deletion or verbose.
+    # Only need to display VM(s) if the user is confirming  deletion or verbose.
     if verbose or not args.quiet:
       print(f'Found {len(candidates)} VM(s)/Pod(s) to delete.\n')
       self._display_instance_names(
