@@ -842,7 +842,7 @@ use these commands. Thus this is considered a ***advanced usage*** and should be
 used with ***caution***.
 
 Below is an example of using extra arguments to change the
-[maintence policy](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--maintenance-policy)
+[maintenance policy](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--maintenance-policy)
 for the `xprofiler` VM instance using the `create` subcommand:
 
 ```bash
