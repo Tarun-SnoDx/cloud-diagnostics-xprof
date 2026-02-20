@@ -27,7 +27,7 @@ required components, properly wait setup and output URL to access Tensorboard
 Web UI. Kubernetes cluster and log diretory for Tensorboard must created
 outside.
 
-Kubernets components:
+kubernetes components:
 - Tensorboard Deployment
 - Tensorboard Service (to balance traffic)
 - Proxy Deployment (entry point for Tensorboard Web UI)
