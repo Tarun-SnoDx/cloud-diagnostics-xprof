@@ -38,7 +38,7 @@ class KeyValueAction(argparse.Action):
   def __call__(self, parser, namespace, values, option_string=None):
     # Get either the value from the namespace or create a new one.
     pairs = getattr(namespace, self.dest, {})
-    # Handles if the ddefault is None.
+    # Handles if the default is None.
     if pairs is None:
       pairs: dict[str, str | None] = {}
 
@@ -89,7 +89,7 @@ class XprofParser:
         description=self.description,
         formatter_class=argparse.RawTextHelpFormatter,
     )
-    # Only display abbereviated outputs (does not affect verbose).
+    # Only display abbreviated outputs (does not affect verbose).
     self.parser.add_argument(
         '--abbrev',
         '-a',
@@ -189,7 +189,7 @@ class XprofParser:
       --flag=value --other-flag value -f=value
 
     Arguements that are not 'flags' (don't start with a dash) are ignored if not
-    preceeded by a flag.
+    preceded by a flag.
 
     Args:
       extra_args: The extra arguments from the command line.
@@ -200,7 +200,7 @@ class XprofParser:
     if extra_args is None:
       return None
     extra_args_map = {}
-    # Better to iterate using a while loop since can be arbiratry values.
+    # Better to iterate using a while loop since can be arbitrary values.
     i = 0
     while i < len(extra_args):
       arg = extra_args[i]
