@@ -114,7 +114,7 @@ file.
 
 ## Example usage
 
-### Option 1: Read logs drectly from Cloud Logging
+### Option 1: Read logs directly from Cloud Logging
 
 #### Step 1: Run mltrace
 
